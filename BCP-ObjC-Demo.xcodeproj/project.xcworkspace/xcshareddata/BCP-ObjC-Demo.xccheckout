@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E162EF51-BF1A-4753-A713-2DA509327902</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BCP-ObjC-Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E7ECD2B60A2F61DF8B99345D4DC5E4533F2A8ECB</key>
+		<string>github.com:kopibcp/BCP-ObjC-demo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BCP-ObjC-Demo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E7ECD2B60A2F61DF8B99345D4DC5E4533F2A8ECB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:kopibcp/BCP-ObjC-demo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E7ECD2B60A2F61DF8B99345D4DC5E4533F2A8ECB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E7ECD2B60A2F61DF8B99345D4DC5E4533F2A8ECB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BCP-ObjC-Demo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

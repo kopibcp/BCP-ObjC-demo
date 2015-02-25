@@ -16,6 +16,10 @@
 		630E3F811A9DB7C2006AC83A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630E3F801A9DB7C2006AC83A /* Images.xcassets */; };
 		630E3F841A9DB7C2006AC83A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630E3F821A9DB7C2006AC83A /* LaunchScreen.xib */; };
 		630E3F901A9DB7C2006AC83A /* BCP_ObjC_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 630E3F8F1A9DB7C2006AC83A /* BCP_ObjC_DemoTests.m */; };
+		630E3F9A1A9E0920006AC83A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630E3F991A9E0920006AC83A /* CoreLocation.framework */; };
+		630E3FA01A9E2169006AC83A /* FeedbackUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630E3F9F1A9E2169006AC83A /* FeedbackUpdate.m */; };
+		630E3FA51A9E2173006AC83A /* MobileUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630E3FA21A9E2173006AC83A /* MobileUpdate.m */; };
+		630E3FA61A9E2173006AC83A /* BeaconUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630E3FA41A9E2173006AC83A /* BeaconUpdate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,13 @@
 		630E3F891A9DB7C2006AC83A /* BCP-ObjC-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BCP-ObjC-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630E3F8E1A9DB7C2006AC83A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		630E3F8F1A9DB7C2006AC83A /* BCP_ObjC_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCP_ObjC_DemoTests.m; sourceTree = "<group>"; };
+		630E3F991A9E0920006AC83A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		630E3F9E1A9E2169006AC83A /* FeedbackUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackUpdate.h; sourceTree = "<group>"; };
+		630E3F9F1A9E2169006AC83A /* FeedbackUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackUpdate.m; sourceTree = "<group>"; };
+		630E3FA11A9E2173006AC83A /* MobileUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileUpdate.h; sourceTree = "<group>"; };
+		630E3FA21A9E2173006AC83A /* MobileUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileUpdate.m; sourceTree = "<group>"; };
+		630E3FA31A9E2173006AC83A /* BeaconUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconUpdate.h; sourceTree = "<group>"; };
+		630E3FA41A9E2173006AC83A /* BeaconUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconUpdate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630E3F9A1A9E0920006AC83A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +81,7 @@
 		630E3F611A9DB7C2006AC83A = {
 			isa = PBXGroup;
 			children = (
+				630E3F991A9E0920006AC83A /* CoreLocation.framework */,
 				630E3F6C1A9DB7C2006AC83A /* BCP-ObjC-Demo */,
 				630E3F8C1A9DB7C2006AC83A /* BCP-ObjC-DemoTests */,
 				630E3F6B1A9DB7C2006AC83A /* Products */,
@@ -87,6 +100,12 @@
 		630E3F6C1A9DB7C2006AC83A /* BCP-ObjC-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				630E3F9E1A9E2169006AC83A /* FeedbackUpdate.h */,
+				630E3F9F1A9E2169006AC83A /* FeedbackUpdate.m */,
+				630E3FA11A9E2173006AC83A /* MobileUpdate.h */,
+				630E3FA21A9E2173006AC83A /* MobileUpdate.m */,
+				630E3FA31A9E2173006AC83A /* BeaconUpdate.h */,
+				630E3FA41A9E2173006AC83A /* BeaconUpdate.m */,
 				630E3F711A9DB7C2006AC83A /* AppDelegate.h */,
 				630E3F721A9DB7C2006AC83A /* AppDelegate.m */,
 				630E3F741A9DB7C2006AC83A /* RootViewController.h */,
@@ -232,7 +251,10 @@
 				630E3F791A9DB7C2006AC83A /* DataViewController.m in Sources */,
 				630E3F731A9DB7C2006AC83A /* AppDelegate.m in Sources */,
 				630E3F7C1A9DB7C2006AC83A /* ModelController.m in Sources */,
+				630E3FA01A9E2169006AC83A /* FeedbackUpdate.m in Sources */,
+				630E3FA61A9E2173006AC83A /* BeaconUpdate.m in Sources */,
 				630E3F701A9DB7C2006AC83A /* main.m in Sources */,
+				630E3FA51A9E2173006AC83A /* MobileUpdate.m in Sources */,
 				630E3F761A9DB7C2006AC83A /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
