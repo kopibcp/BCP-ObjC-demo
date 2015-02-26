@@ -8,10 +8,10 @@
 
 #import "MobileUpdate.h"
 #import <CoreLocation/CoreLocation.h>
-#import "com_kopi_dmopAppDelegate.h"
+#import "AppDelegate.h"
+#import "AFNetworking.h"
 
 // Set this to your beacon API Key
-static NSString * const mobileAPIKey = @"iOS";
 static NSString * const mobileURLString = @"http://dev.bcp.io/token";
 
 @implementation MobileUpdate
@@ -41,15 +41,15 @@ static NSString * const mobileURLString = @"http://dev.bcp.io/token";
 
 - (void)updateMobileAtLocation:(CLLocation *)location
 {
-    com_kopi_dmopAppDelegate *appDelegate = (com_kopi_dmopAppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     NSString* dt = appDelegate.devicetoken;
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     
     
-    parameters[@"CLIENTID"]=@"IOS";
-    parameters[@"SECRET"]=@"asdf";
+    parameters[@"CLIENTID"]=@"DI0NYT1kqWfyQAJU";
+    parameters[@"SECRET"]=@"8evcrCcmRsKzZglV";
     parameters[@"USERID"]=appDelegate.userid;
     parameters[@"LATITUDE"] =  [NSString stringWithFormat:@"%f",location.coordinate.latitude];
     parameters[@"LONGITUDE"] = [NSString stringWithFormat:@"%f",location.coordinate.longitude];

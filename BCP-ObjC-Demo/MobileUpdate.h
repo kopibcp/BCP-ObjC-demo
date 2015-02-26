@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 DMop. All rights reserved.
 //
 
-#import "AFHTTPSessionManager.h"
+
 #import <CoreLocation/CoreLocation.h>
+#import "AFHTTPSessionManager.h"
 
 @protocol MobileUpdateDelegate;
 @interface MobileUpdate : AFHTTPSessionManager

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AFHTTPSessionManager.h"
 
-
 @protocol FeedbackUpdateDelegate;
 @interface FeedbackUpdate : AFHTTPSessionManager
 

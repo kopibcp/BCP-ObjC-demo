@@ -8,10 +8,11 @@
 
 #import "BeaconUpdate.h"
 #import <CoreLocation/CoreLocation.h>
+#import "AFNetworking.h"
 
 // Set this to your beacon API Key
 static NSString * const mobileAPIKey = @"iOS";
-static NSString * const mobileURLString = @"http://dev.bcp.io/trackbeacon";
+static NSString * const mobileURLString = @"https://api.bcp.io/updatebeacon";
 
 @implementation BeaconUpdate
 + (BeaconUpdate *)sharedBeaconClient

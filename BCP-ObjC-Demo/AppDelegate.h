@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
-
+@property (strong, nonatomic) NSString* devicetoken;
+@property (strong, nonatomic) NSString* userid;
 @end
 
