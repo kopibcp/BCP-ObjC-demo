@@ -1,23 +1,23 @@
 //
-//  MobileUpdate.m
-//  DMop
+//  LocationUpdate.m
+//  BCP
 //
 //  Created by Sam on 21/4/14.
-//  Copyright (c) 2014 DMop. All rights reserved.
+//  Copyright (c) 2014 BCP. All rights reserved.
 //
 
-#import "MobileUpdate.h"
+#import "LocationUpdate.h"
 #import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
 #import "AFNetworking.h"
 
 // Set this to your beacon API Key
-static NSString * const mobileURLString = @"http://dev.bcp.io/token";
+static NSString * const mobileURLString = @"http://token.bcp.io/token";
 
-@implementation MobileUpdate
-+ (MobileUpdate *)sharedMobileClient
+@implementation LocationUpdate
++ (LocationUpdate *)sharedMobileClient
 {
-    static MobileUpdate *_sharedMobileClient = nil;
+    static LocationUpdate *_sharedMobileClient = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -56,16 +56,16 @@ static NSString * const mobileURLString = @"http://dev.bcp.io/token";
     parameters[@"DEVICEID"]= dt;
     parameters[@"FORMAT"] = @"json";
         
-    NSLog(@"MobileUpdate Posting!");
+    NSLog(@"LocationUpdate Posting!");
         
     [self POST:@"" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        if ([self.delegate respondsToSelector:@selector(MobileUpdate:didUpdateMobile:)]) {
-            [self.delegate MobileUpdate:self didUpdateMobile:responseObject];
+        if ([self.delegate respondsToSelector:@selector(LocationUpdate:didUpdateMobile:)]) {
+            [self.delegate LocationUpdate:self didUpdateMobile:responseObject];
 
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if ([self.delegate respondsToSelector:@selector(MobileUpdate:didFailWithError:)]) {
-            [self.delegate MobileUpdate:self didFailWithError:error];
+        if ([self.delegate respondsToSelector:@selector(LocationUpdate:didFailWithError:)]) {
+            [self.delegate LocationUpdate:self didFailWithError:error];
         }
     }];
 }

@@ -1,9 +1,9 @@
 //
 //  BeaconUpdate.m
-//  DMop
+//  BCP
 //
 //  Created by Sam on 21/4/14.
-//  Copyright (c) 2014 DMop. All rights reserved.
+//  Copyright (c) 2014 BCP. All rights reserved.
 //
 
 #import "BeaconUpdate.h"
@@ -11,8 +11,7 @@
 #import "AFNetworking.h"
 
 // Set this to your beacon API Key
-static NSString * const mobileAPIKey = @"iOS";
-static NSString * const mobileURLString = @"https://api.bcp.io/updatebeacon";
+static NSString * const mobileURLString = @"http://api.bcp.io/beaconupdate";
 
 @implementation BeaconUpdate
 + (BeaconUpdate *)sharedBeaconClient

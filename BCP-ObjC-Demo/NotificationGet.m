@@ -1,21 +1,21 @@
 //
-//  FeedbackUpdate.m
-//  DMop
+//  NotificationUpdate.m
+//  BCP
 //
 //  Created by Sam on 25/4/14.
-//  Copyright (c) 2014 DMop. All rights reserved.
+//  Copyright (c) 2014 BCP. All rights reserved.
 //
 
-#import "FeedbackUpdate.h"
+#import "NotificationGet.h"
 
 // Set this to your beacon API Key
-static NSString * const mobileAPIKey = @"iOS";
-static NSString * const mobileURLString = @"http://dev.bcp.io/retail/feedback";
 
-@implementation FeedbackUpdate
-+ (FeedbackUpdate *)sharedFeedbackClient
+static NSString * const mobileURLString = @"http://api.bcp.io/notificationget";
+
+@implementation NotificationSetup
++ (NotificationSetup *)sharedFeedbackClient
 {
-    static FeedbackUpdate *_sharedFeedbackClient = nil;
+    static NotificationUpdate *_sharedFeedbackClient = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -37,23 +37,23 @@ static NSString * const mobileURLString = @"http://dev.bcp.io/retail/feedback";
     return self;
 }
 
-- (void)updateFeedback:(NSString*) apitoken : (NSString*) feedbackid
+- (void)setupNotification:(NSString*) apitoken : (NSString*) notificationid
 {
     
     if (apitoken !=nil)
     {
         NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-        parameters[@"FEEDBACKID"] = feedbackid;
+        parameters[@"NOTIFICATIONID"] = notificationid;
         parameters[@"FORMAT"] = @"json";
         parameters[@"access_token"] = apitoken;
         
         [self GET:@"" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-            if ([self.delegate respondsToSelector:@selector(FeedbackUpdate:didUpdateFeedback:)]) {
-                [self.delegate FeedbackUpdate:self didUpdateFeedback:responseObject];
+            if ([self.delegate respondsToSelector:@selector(NotificationUpdate:didUpdateFeedback:)]) {
+                [self.delegate NotificationUpdate:self didUpdateFeedback:responseObject];
             }
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            if ([self.delegate respondsToSelector:@selector(FeedbackUpdate:didFailWithError:)]) {
-                [self.delegate FeedbackUpdate:self didFailWithError:error];
+            if ([self.delegate respondsToSelector:@selector(NotificationUpdate:didFailWithError:)]) {
+                [self.delegate NotificationUpdate:self didFailWithError:error];
             }
         }];
     }

@@ -1,9 +1,9 @@
 //
 //  BeaconUpdate.h
-//  DMop
+//  BCP
 //
 //  Created by Sam on 21/4/14.
-//  Copyright (c) 2014 DMop. All rights reserved.
+//  Copyright (c) 2014 BCP. All rights reserved.
 //
 
 
